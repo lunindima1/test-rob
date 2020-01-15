@@ -13,16 +13,20 @@ android {
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
-        setProperty("archivesBaseName", "TBA-TestAutoBuild-$versionCode($versionName)")
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-         
          }
-    }	
+         applicationVariants.all { variant ->
+            variant.outputs.all {
+                def buildType = variant.buildType.isDebuggable()? '_debug' : ''
+                def dateTime =  new SimpleDateFormat("_MMMMM.dd_HH-mm").format(new Date())
+                outputFileName = "test_${variant.versionName}${buildType}${dateTime}_build-${variant.versionCode}.apk"
+   }
+        }
 }
 
 
