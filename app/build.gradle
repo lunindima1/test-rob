@@ -13,23 +13,20 @@ android {
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
-        setProperty("archivesBaseName", "TBA-TestAutoBuild-$versionCode($versionName)")
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            android.applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            def file = output.outputFile
+            output.outputFile = new File(file.parent, file.name.replace(".apk", "-" + getDateTime() + ".apk"))
         }
     }	
 }
-def renameAPK(variant, defaultConfig, buildType) {
- variant.outputs.each { output ->
-     def formattedDate = new Date().format('yyMMdd')
 
-     def file = output.packageApplication.outputFile
-     def fileName = applicationName + "_V" + defaultConfig.versionCode + "_" + formattedDate + "_" + buildType + ".apk"
-     output.packageApplication.outputFile = new File(file.parent, fileName)
  }
 }
 
