@@ -51,7 +51,7 @@ steps:
       
       ls
 
-      cp test1-debug.apk test2-debug.apk
+      mv test1-debug.apk test2-debug.apk
 
       ls
 
