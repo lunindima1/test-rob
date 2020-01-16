@@ -54,6 +54,4 @@ steps:
 
       cd debug
       
-      cp TBA-TestAutoBuild-1(1.0)-debug.apk test1.apk
-
       ls
