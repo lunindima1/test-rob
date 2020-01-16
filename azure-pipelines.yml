@@ -44,8 +44,10 @@ steps:
       
       echo Hello world
       
-      ls
-
       cd app
+
+      cd build
+
+      cd outputs
 
       ls
