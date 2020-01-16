@@ -45,3 +45,7 @@ steps:
       echo Hello world
       
       ls
+
+      cd app
+
+      ls
