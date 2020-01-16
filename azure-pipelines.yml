@@ -50,4 +50,8 @@ steps:
 
       cd outputs
 
+      cd apk
+
+      cd debug
+      
       ls
