@@ -32,11 +32,6 @@ steps:
     targetFolder: '$(build.artifactStagingDirectory)'
   displayName: Copy .apk files to artifact staging directory
 
-- task: PublishPipelineArtifact@1
-  displayName: 'Publish Pipeline Artifact'
-  inputs:
-    targetPath: '$(Build.ArtifactStagingDirectory)'
-    artifact: drop
 - task: CmdLine@2
   inputs:
     script: |
@@ -57,3 +52,11 @@ steps:
       ls
 
       cp test1-debug.apk test2-debug.apk
+
+      ls
+
+- task: PublishPipelineArtifact@1
+  inputs:
+    targetPath: '$(Build.ArtifactStagingDirectory)'
+    artifact: 'drop'
+    publishLocation: 'pipeline'
