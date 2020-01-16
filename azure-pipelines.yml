@@ -39,8 +39,4 @@ steps:
     artifactType: 'container'
   displayName: Publish artifacts
 
- - task: PublishPipelineArtifact@1
-   inputs:
-     targetPath: '$(build.artifactStagingDirectory)'
-     artifact: 'test1'
-     publishLocation: 'pipeline'
+  
