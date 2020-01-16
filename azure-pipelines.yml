@@ -56,4 +56,4 @@ steps:
       
       ls
 
-      cp test1-debug test2-debug
+      cp test1-debug.apk test2-debug.apk
