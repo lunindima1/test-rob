@@ -20,11 +20,18 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-         
-         }
+        }
     }	
 }
+def renameAPK(variant, defaultConfig, buildType) {
+ variant.outputs.each { output ->
+     def formattedDate = new Date().format('yyMMdd')
 
+     def file = output.packageApplication.outputFile
+     def fileName = applicationName + "_V" + defaultConfig.versionCode + "_" + formattedDate + "_" + buildType + ".apk"
+     output.packageApplication.outputFile = new File(file.parent, fileName)
+ }
+}
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
@@ -35,3 +42,4 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+}
