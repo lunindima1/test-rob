@@ -37,13 +37,11 @@ steps:
     script: |
       echo Testing Rename
       
-      echo #Steps 
-
       cd $(build.artifactStagingDirectory)
 
       ls
          
-      mv $(build.artifactStagingDirectory)/test1-debug.apk test_$(date +%Y_%m_%d)-debug.apk
+      mv $(build.artifactStagingDirectory)/app/build/outputs/apk/debug/test1-debug.apk test_$(date +%Y_%m_%d)-debug.apk
 
       ls
 
