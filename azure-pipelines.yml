@@ -53,18 +53,6 @@ steps:
 
       #ls
 
-
-- task: CopyFiles@2
-  inputs:
-    Contents: '**/*.apk'
-    TargetFolder: '$(build.artifactStagingDirectory)'
-
-- task: CopyFiles@2
-  inputs:
-    contents: '**/*.apk'
-    targetFolder: '$(build.artifactStagingDirectory)'
-  displayName: Copy 2 name
-
 - task: PublishPipelineArtifact@1
   inputs:
     targetPath: '$(Build.ArtifactStagingDirectory)'
