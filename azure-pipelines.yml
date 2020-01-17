@@ -43,7 +43,7 @@ steps:
       
       ls
 
-      mv test1-debug.apk test_$(date +%Y_%m_%d)-debug.apk
+      rename 's\test1-debug.apk/\test_$(date +%Y_%m_%d)-debug.apk/' *.apk
 
       ls
 
