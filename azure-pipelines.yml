@@ -51,7 +51,9 @@ steps:
 
       cd /Users/runner/runners/2.163.1/work/1/a/app/build/outputs/apk/debug/
 
-      rm /Users/runner/runners/2.163.1/work/1/a/app/build/outputs/apk/debug/test1-debug.apk
+      ls
+
+      rm test1-debug.apk
 
       ls
 
