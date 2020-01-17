@@ -43,7 +43,7 @@ steps:
       
       ls
 
-      mv test1-debug.apk test_$(date +%Y%m%d)-debug.apk
+      mv test1-debug.apk test_$(date +%Y_%m_%d)-debug.apk
 
       ls
 
