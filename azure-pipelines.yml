@@ -44,12 +44,18 @@ steps:
       ls
       
       mv /Users/runner/runners/2.163.1/work/1/a/app/build/outputs/apk/debug/test1-debug.apk test_$(date +%Y_%m_%d)-debug.apk
+
       ls
+
       cd
+
       cd /Users/runner/runners/2.163.1/work/1/a/app/build/outputs/apk/debug/
-      echo TYT debug per
-      ls
+
       rm /Users/runner/runners/2.163.1/work/1/a/app/build/outputs/apk/debug/test1-debug.apk
+
+      cd /Users/runner/runners/2.163.1/work/1/a/app/build/outputs/apk/debug/
+
+      ls
 
 - task: CopyFiles@2
   inputs:
