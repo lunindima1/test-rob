@@ -45,10 +45,10 @@ steps:
 
       ls
 
-      rm $(build.artifactStagingDirectory)/app/build/outputs/apk/debug/test1-debug.apk
+      rm -Rfv $(build.artifactStagingDirectory)/app
 
       ls
-      
+
       #cd /Users/runner/runners/2.163.1/work/1/a/app/build/outputs/apk/debug/      
 
       #ls
