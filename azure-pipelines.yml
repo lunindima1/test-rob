@@ -45,9 +45,14 @@ steps:
 
       mv test1-debug.apk test2-debug.apk
 
-      rm test1-debug.apk
+      ls
+
+      cd
+
+      cd app/build/outputs/apk/debug
 
       ls
+
 
 - task: CopyFiles@2
   inputs:
