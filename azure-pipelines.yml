@@ -35,15 +35,15 @@ steps:
 - task: CmdLine@2
   inputs:
     script: |
-      echo Write your commands here
+      echo Testing Rename
       
-      echo Hello world
+      echo #Steps 
       
       cd app/build/outputs/apk/debug
       
       ls
 
-      mv test1-debug.apk test2-debug.apk
+      mv test1-debug.apk test_$(date +%Y%m%d)-debug.apk
 
       ls
 
