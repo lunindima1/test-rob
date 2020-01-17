@@ -39,15 +39,7 @@ steps:
       
       echo Hello world
       
-      cd app
-
-      cd build
-
-      cd outputs
-
-      cd apk
-
-      cd debug
+      cd app/build/outputs/apk/debug
       
       ls
 
