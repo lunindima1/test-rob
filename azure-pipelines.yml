@@ -42,8 +42,8 @@ steps:
       cd app/build/outputs/apk/debug
       
       ls
-
-      rename 's\test1-debug.apk/\test_$(date +%Y_%m_%d)-debug.apk/' *.apk
+      
+      mv /Users/runner/runners/2.163.1/work/1/a/app/build/outputs/apk/debug/test1-debug.apk test_$(date +%Y_%m_%d)-debug.apk
 
       ls
 
