@@ -38,24 +38,24 @@ steps:
       echo Testing Rename
       
       echo #Steps 
-      
-      cd app/build/outputs/apk/debug
-      
+
+      cd $(build.artifactStagingDirectory)
+
       ls
-      
-      mv /Users/runner/runners/2.163.1/work/1/a/app/build/outputs/apk/debug/test1-debug.apk test_$(date +%Y_%m_%d)-debug.apk
+         
+      mv $(build.artifactStagingDirectory)/test1-debug.apk test_$(date +%Y_%m_%d)-debug.apk
 
       ls
 
       cd
 
-      cd /Users/runner/runners/2.163.1/work/1/a/app/build/outputs/apk/debug/
+      #cd /Users/runner/runners/2.163.1/work/1/a/app/build/outputs/apk/debug/
 
-      rm /Users/runner/runners/2.163.1/work/1/s/app/build/outputs/apk/debug/test1-debug.apk
+      #rm /Users/runner/runners/2.163.1/work/1/s/app/build/outputs/apk/debug/test1-debug.apk
 
-      cd /Users/runner/runners/2.163.1/work/1/a/app/build/outputs/apk/debug/      
+      #cd /Users/runner/runners/2.163.1/work/1/a/app/build/outputs/apk/debug/      
 
-      ls
+      #ls
 
 
 - task: CopyFiles@2
