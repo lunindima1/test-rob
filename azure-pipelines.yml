@@ -16,14 +16,14 @@ steps:
 - task: Gradle@2
   inputs:
     workingDirectory: ''
-    gradleWrapperFile: 'gradlew --warning-mode=all'
+    gradleWrapperFile: 'gradlew'
     gradleOptions: '-Xmx3072m'
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.8'
     jdkArchitectureOption: 'x64'
     publishJUnitResults: true
     testResultsFiles: '**/TEST-*.xml'
-    tasks: 'assembleDebug test'
+    tasks: 'assembleDebug test --warning-mode=all'
   displayName: gradlew assembleDebug test
 
 - task: CopyFiles@2
