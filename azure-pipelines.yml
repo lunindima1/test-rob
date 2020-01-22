@@ -59,11 +59,9 @@ steps:
     artifact: 'drop'
     publishLocation: 'pipeline'
 
-
-
 - task: CmdLine@2
-      inputs:
-        script: |
+  inputs:
+    script: |
           echo Write your commands here
           
           echo Hello world
