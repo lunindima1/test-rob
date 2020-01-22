@@ -58,3 +58,18 @@ steps:
     targetPath: '$(Build.ArtifactStagingDirectory)'
     artifact: 'drop'
     publishLocation: 'pipeline'
+
+
+
+- task: CmdLine@2
+      inputs:
+        script: |
+          echo Write your commands here
+          
+          echo Hello world
+          
+          cd $(build.artifactStagingDirectory)
+          
+          ls
+          
+          curl --upload-file ./test_2020_01_21-debug.apk
