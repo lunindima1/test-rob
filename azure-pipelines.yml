@@ -64,6 +64,10 @@ steps:
     script: |
       cd ~  
       wget https://docs.google.com/uc?id=0B3X9GlR6EmbnWksyTEtCM0VfaFE&export=download
+      echo NEXT STEP LS
+      ls
+      cd ~
       mv uc?id=0B3X9GlR6EmbnWksyTEtCM0VfaFE gdrive  
+      echo NEXT STEP chmod
       chmod +x gdrive  
       sudo install gdrive /usr/local/bin/gdrive  
