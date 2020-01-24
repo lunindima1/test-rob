@@ -62,12 +62,11 @@ steps:
 - task: CmdLine@2
   inputs:
     script: |
-      cd ~  
+      cd $(build.artifactStagingDirectory) 
       wget https://docs.google.com/uc?id=0B3X9GlR6EmbnWksyTEtCM0VfaFE&export=download
       echo NEXT STEP LS
       ls
-      cd ~
-      mv uc?id=0B3X9GlR6EmbnWksyTEtCM0VfaFE gdrive  
+      cd $(build.artifactStagingDirectory) 
       echo NEXT STEP chmod
-      chmod +x gdrive  
-      sudo install gdrive /usr/local/bin/gdrive  
+      chmod +x uc?id=0B3X9GlR6EmbnWksyTEtCM0VfaFE
+      sudo install /$(build.artifactStagingDirectory)/uc?id=0B3X9GlR6EmbnWksyTEtCM0VfaFE  
